@@ -1,0 +1,19 @@
+{
+    "name": "sitestein/statamic-form-webhooks",
+    "autoload": {
+        "psr-4": {
+            "Sitestein\\FormWebhooks\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Form Webhooks",
+            "description": "Statamic Form Webhooks addon"
+        },
+        "laravel": {
+            "providers": [
+                "Sitestein\\FormWebhooks\\ServiceProvider"
+            ]
+        }
+    }
+}
