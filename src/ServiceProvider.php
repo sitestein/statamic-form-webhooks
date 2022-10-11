@@ -13,8 +13,7 @@ class ServiceProvider extends AddonServiceProvider
         SubmissionCreated::class => [FormSubmission::class],
     ];
 
-    public function bootAddon()
-    {
-        //
-    }
+    protected $configs = [
+        'form_webhooks' => __DIR__.'/../config/form_webhooks.php'
+    ];
 }
