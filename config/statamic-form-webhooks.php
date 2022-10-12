@@ -12,6 +12,6 @@ return [
     |
     */
     'webhooks' => [
-        //    'contact' => 'https://hook.eu1.make.com/loremipsum',
+        // 'contact' => 'https://hook.eu1.make.com/loremipsum',
     ]
 ];

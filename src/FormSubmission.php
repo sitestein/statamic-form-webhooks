@@ -13,14 +13,14 @@ class FormSubmission
         $handle = $submission->form->handle;
 
         // check if handle exists in config
-        if (!$webhook = config('statamic-form-webhooks.webhooks' . $handle)) {
+        if (!$webhook = config('statamic-form-webhooks.webhooks.' . $handle)) {
             return;
         }
 
         $response = Http::post($webhook, $submission->data()->toArray());
 
         if (function_exists('ray')) {
-            ray('Sitestein\FormWebhooks:: Form submission sent to ' . $webhook . ' with response ' . $response->status());
+            ray("[Sitestein\FormWebhooks]: Form submission '{$handle}' sent to '{$webhook}'", "Response code: {$response->status()}", "Response body: {$response->body()}");
         }
     }
 }
