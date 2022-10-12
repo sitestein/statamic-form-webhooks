@@ -19,7 +19,7 @@ composer require sitestein/statamic-form-webhooks
 ```
 
 ``` bash
-php artisan vendor:publish --tag=statamic-font-awesome-config
+php artisan vendor:publish --tag=statamic-form-webhooks-config
 ```
 
 
