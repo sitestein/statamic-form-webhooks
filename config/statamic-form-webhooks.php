@@ -11,6 +11,7 @@ return [
     | The key is the form handle and the value is the webhook url.
     |
     */
-
-//    'contact' => 'https://hook.eu1.make.com/loremipsum',
+    'webhooks' => [
+        //    'contact' => 'https://hook.eu1.make.com/loremipsum',
+    ]
 ];

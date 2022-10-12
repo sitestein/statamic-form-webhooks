@@ -13,7 +13,7 @@ class FormSubmission
         $handle = $submission->form->handle;
 
         // check if handle exists in config
-        if (!$webhook = config('sitestein.form_webhooks.' . $handle)) {
+        if (!$webhook = config('statamic-form-webhooks.webhooks' . $handle)) {
             return;
         }
 

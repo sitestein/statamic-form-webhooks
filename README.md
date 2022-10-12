@@ -2,9 +2,9 @@
 
 > Form Webhooks is a Statamic addon that pushes data from a form submission to a specified webhook.
 
-This can be usefull to send form data to a CRM, mailinglist or other service. 
+Form Webhooks can be usefull to send form data to a CRM, mailinglist or other service. 
 
-You could also create webhooks with Make.com or Zapier and send form data to your desired integration, this allows you to;
+You could create webhooks with Make.com or Zapier and send form data to your desired integration, this allows you to;
 
 - Collect e-mailadresses and add them to a Mailchimp mailinglist
 - Notify Slack channels of a new form submission
@@ -26,12 +26,17 @@ php artisan vendor:publish --tag=statamic-font-awesome-config
 ## How to Use
 
 After you installed the package and run the publish command, you can find the config file in `config/statamic-form-webhooks.php`.
-Here you can add a new webhook by adding a new item to the array.
+Here you can add a new webhook by adding a new item to `webhooks` array.
 
 Example:
 ```php
-
-    'newsletter' => 'https://hook.eu1.make.com/loremipsum',
+ [
+    // ...
+    'webhooks' => [
+        // ...
+        'newsletter' => 'https://hook.eu1.make.com/loremipsum',
+    ]
+ ]
 
 ```
 
