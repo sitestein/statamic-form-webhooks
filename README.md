@@ -25,8 +25,8 @@ php artisan vendor:publish --tag=statamic-font-awesome-config
 
 ## How to Use
 
-After you installed the package and run the publish command, you can find the config file in `config/statamic/form-webhooks.php`.
-Here you can add a new webhook by adding a new array to the `webhooks` array.
+After you installed the package and run the publish command, you can find the config file in `config/statamic-form-webhooks.php`.
+Here you can add a new webhook by adding a new item to the array.
 
 Example:
 ```php
