@@ -34,11 +34,22 @@ Example:
     // ...
     'webhooks' => [
         // ...
-        'newsletter' => 'https://hook.eu1.make.com/loremipsum',
+        'newsletter' => [ // 'newsletter' is the handle of the form
+            'url' => 'https://hook.eu1.make.com/loremipsum', // The webhook url
+            'fields' => [ // The fields that should be sent to the webhook
+                'email' => 'email',
+                'name' => 'name',
+            ],
+            'if' => [ // optional, only send if these fields are a specific value
+                'checkboxes_field.0' => 'subscribe',
+            ],
+        ],
     ]
  ]
 
 ```
 
-Now all submissions from the form with the handle `newsletter` will be send to the webhook. If you use Make.com for example, you can create a webhook and see the form data, which you can map to your desired integration.
+Now all submissions from the form with the handle `newsletter` will be sent to the webhook. If you use Make.com for example, you can create a webhook and see the form data, which you can map to your desired integration.
+
+
 This package also integrates with Ray for debugging, if you have Ray installed, just open the app and submit a form.
